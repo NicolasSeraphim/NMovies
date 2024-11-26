@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Foldit", sans-serif;
+    background-color: #4e4e4e;
+    overflow-x: hidden; /*barra de rolagem na horizonta */
+}
+
+.navbar {
+    backdrop-filter: blur(2px);
+    background-color: rgba(37, 36, 36, 0.548);
+}
+
+.navbar .navbar-brand {
+    color: #c0c0c0;
+    font-weight: bold;
+}
+
+.navbar .nav-item .nav-link {
+    color: #ffffff;
+}
+
+.scrolled {
+    background-color: #000;
+}
+
+.carousel-inner {
+    max-height: 100vh;
+}
+
+.carousel-inner .carousel-item img {
+    max-height: 100vh;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    left: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.carousel-caption h3 {
+    color: #c0c0c0;
+    font-weight: bolder;
+    font-size: 32px;
+    font-family: "Foldit", serif;;
+}
+
+@media only screen and (max-width: 500px){
+    .carousel-caption h3 {
+        font-size: 20px;
+    } 
+    
+}
+
+.carousel-caption p {
+    color: #fff;
+}
+
+.rowposter {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.rowposter a {
+    cursor: inherit;
+}
+
+.rowimg {
+    margin-right: 10px;
+    border-radius: 20px;
+    box-sizing: content-box;
+    transition: transform 450ms;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.rowimg:hover {
+    transform: scale(1.10);
+}
+
+.rowposter::-webkit-scrollbar {
+    display: none;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.bx-movie {
+    font-size: 100px;
+    position: relative;
+}
