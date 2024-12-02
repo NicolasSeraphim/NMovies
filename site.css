@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +10,7 @@ body {
     font-family: "Foldit", sans-serif;
     background-color: #181818;
     overflow-x: hidden; /*barra de rolagem na horizonta */
+    overflow-y: scroll;
 }
 
 .navbar {
@@ -100,4 +103,31 @@ body {
     font-size: 100px;
     position: relative;
     color: #eaeaea;
+}
+
+a.nav-link.active {
+    color: white !important;
+    font-weight: 800;
+}
+
+#pesquisar input[type=text] {
+    padding: 15px 20px;
+    font-weight: 600;
+    background-color: white;
+    border-radius: 50px;
+    width: 100%;
+    font-size: 18px;
+    border:  #e50914 solid 2px;
+}
+
+#pesquisar button {
+    padding: 12px;
+    font-size: 20px;
+    top: 2px;
+    right: 0;
+    border-radius: 50%;
+    width: 60px;
+    border:  #e50914 solid 2px;
+    background-color: #e50914;
+    color: white;
 }
