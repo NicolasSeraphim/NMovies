@@ -6,13 +6,13 @@
 
 body {
     font-family: "Foldit", sans-serif;
-    background-color: #4e4e4e;
+    background-color: #181818;
     overflow-x: hidden; /*barra de rolagem na horizonta */
 }
 
 .navbar {
     backdrop-filter: blur(2px);
-    background-color: rgba(37, 36, 36, 0.548);
+    background-color: rgba(73, 71, 71, 0.548);
 }
 
 .navbar .navbar-brand {
@@ -25,7 +25,7 @@ body {
 }
 
 .scrolled {
-    background-color: #000;
+    background-color: #3a3939;
 }
 
 .carousel-inner {
@@ -47,7 +47,7 @@ body {
 }
 
 .carousel-caption h3 {
-    color: #c0c0c0;
+    color: #f82f2f;
     font-weight: bolder;
     font-size: 32px;
     font-family: "Foldit", serif;;
@@ -99,4 +99,5 @@ body {
 .bx-movie {
     font-size: 100px;
     position: relative;
+    color: #eaeaea;
 }

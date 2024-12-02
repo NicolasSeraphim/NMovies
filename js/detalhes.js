@@ -39,18 +39,35 @@ async function getMovie() {
 
     // buscar o trailer
 
-    let trailer;
-    await fetch(`${baseUrl}${media}/${id}/videos?language=pt-br`, options)
-        .then(res => res.json())
-        .then(res => trailer = res.results)
-        .catch(err => console.log('Erro ao carregar trailers ', err));
-    // console.log(trailer)
+   // Buscar trailers
+let trailer;
+await fetch(`${baseUrl}${media}/${id}/videos?language=pt-br`, options)
+    .then(res => res.json())
+    .then(res => trailer = res.results)
+    .catch(err => console.log('Erro ao carregar trailers ', err));
 
-    if (trailer.length > 0) {
-        document.querySelector('iframe').src = `https://www.youtube.com/embed/${trailer[0].key}`
-    } else {
-        document.querySelector('#trailer').style.display = 'none';
-    }
+let trailerContainer = document.querySelector('#trailer'); // Seleciona a área de trailers
+trailerContainer.innerHTML = `<h3 class="my-3">Trailers Oficiais</h3>`; // Adiciona o título
+
+if (trailer.length > 0) {
+    trailer.forEach((trailerItem) => {
+        trailerContainer.innerHTML += `
+            <div class="col-12 mb-4">
+                <iframe 
+                    src="https://www.youtube.com/embed/${trailerItem.key}" 
+                    frameborder="0" 
+                    width="100%" 
+                    height="500px" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen 
+                    class="rounded-3">
+                </iframe>
+            </div>`;
+    });
+} else {
+    trailerContainer.style.display = 'none';
+}
+
 
     // buscar elenco
     let elenco;
