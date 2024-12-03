@@ -1,0 +1,21 @@
+ body {
+            background-image: url('img/NMovie-Logo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            color: #c0c0c0;
+        }
+
+        .login-box {
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com opacidade */
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-floating {
+            border-radius: 50%;
+        }
+   
