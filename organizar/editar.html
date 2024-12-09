@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NMovies</title>
+    <link rel="stylesheet" href="fonts/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img class="logo" src="img/logo.png" alt="Logo">
+        </a>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Editar perfil</h1>
+            <hr>
+            <form onsubmit="return;">
+                <div class="form-container">
+                    <div class="left">
+                        <div class="imgBox">
+                            <img src="img/avatar2.png" alt="Avatar">
+                            <i class="bi bi-pencil" onclick="alert('mudarFoto')"></i>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <input type="text" placeholder="Nome" autocomplete="none">
+
+                        <label class="opt">Idioma:</label>
+                        <select name="idioma" id="idioma">
+                            <option value="">Português</option>
+                            <option value="">Espanhol</option>
+                            <option value="">Inglês</option>
+                        </select>
+                        
+                        <label class="opt">Game ID:</label>
+                        <p class="text-white">Seu ID é um nome exclusivo que será usado ao jogar com outros assinantes no NMovies Games. <a>Saiba Mais</a></p>
+                        <input type="text" placeholder="Criar Game ID" autocomplete="none">
+                        
+                        <hr>
+
+                        <label class="opt">Configurações de classificação etária:</label>
+                        <label class="age">Todas as classificações etárias</label>
+                        <p>Mostrar títulos de todas as classificações etárias para este perfil.</p>
+                        <button class="btn">Editar</button>
+
+                        <hr>
+                        
+                        <label class="opt">Controles de início automático</label>
+                        <div class="checkbox">
+                            <input type="checkbox" id="proximo">
+                            <label for="proximo">Iniciar automaticamente o próximo episódio de uma série em todos os aparelhos.</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="proximo">
+                            <label for="proximo">Iniciar automaticamente o próximo episódio de uma série em todos os aparelhos.</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="buttons">
+                    <button id="btnOk" class="btn">Salvar</button>
+                    <button id="btnCancel" class="btn">Cancelar</button>
+                    <button id="btnDelete" class="btn">Excluir</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- <script src="js/script.js"></script> -->
+
+</body>
+
+</html>

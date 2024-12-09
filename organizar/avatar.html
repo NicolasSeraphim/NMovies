@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NMovies</title>
+    <link rel="stylesheet" href="fonts/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <style>
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .navbar .item {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .item i {
+            font-size: 3rem;
+            margin-left: -3rem;
+        }
+
+        .navbar .item div h4 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 0.2rem;
+        }
+
+        .navbar .item div h5 {
+            font-size: 1rem;
+        }
+
+        .navbar .user {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .user p {
+            font-size: 1.3rem;
+            margin-right: 0.5rem;
+        }
+
+        .navbar .user img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+        }
+
+        .category {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .category h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .slider {
+            width: 100%;
+            height: 120px;
+            display: flex;
+            overflow-y: hidden;
+            overflow-x: scroll;
+        }
+
+        .slider img {
+            max-height: 120px;
+            object-fit: contain;
+            width: 120px;
+            box-sizing: content-box;
+            transition: transform 450ms;
+            margin-right: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img class="logo" src="img/logo.png" alt="Logo">
+        </a>
+    </header>
+    <main>
+        <div class="container">
+            <div class="navbar">
+                <div class="item">
+                    <i class="bi bi-arrow-left-short"></i>
+                    <div>
+                        <h4>Editar perfil</h4>
+                        <h5>Escolha o ícone do seu perfil.</h5>
+                    </div>
+                </div>
+                <div class="user">
+                    <p>Nome</p>
+                    <img src="img/avatar1.png" alt="Avatar">
+                </div>
+            </div>
+
+            <div id="classicos" class="category">
+                <h2>Os clássicos</h2>
+                <div class="slider"></div>
+            </div>
+
+            <div id="outros" class="category">
+                <h2>Outros</h2>
+                <div class="slider"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- <script src="js/script.js"></script> -->
+    <script>
+        let slider = document.querySelector('#classicos .slider');
+        slider.innerHTML = '';
+        for (let i = 1; i < 20; i++) {
+            slider.innerHTML += `<img src="img/avatar/classicos/avatar${i}.png" alt="Avatar">`;
+        }
+
+        slider = document.querySelector('#outros .slider');
+        slider.innerHTML = '';
+        for (let i = 1; i < 6; i++) {
+            slider.innerHTML += `<img src="img/avatar/outros/avatar${i}.png" alt="Avatar">`;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,21 +1,34 @@
- body {
-            background-image: url('img/NMovie-Logo.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            margin: 0;
-            color: #c0c0c0;
-        }
+body {
+    background-image: url('img/Fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    color: #c0c0c0;
+}
 
-        .login-box {
-            background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com opacidade */
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+.login-box {
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo escuro com opacidade */
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        .btn-floating {
-            border-radius: 50%;
-        }
-   
+.navbar {
+    backdrop-filter: blur(2px);
+    background-color: rgba(179, 179, 179, 0.0);
+}
+        
+.navbar .navbar-brand {
+    color: #c0c0c0;
+    font-weight: bold;
+}
+        
+.navbar .nav-item .nav-link {
+    color: #ffffff;
+}
+        
+.logo {
+    height: 50px;
+    width: 50px;
+}

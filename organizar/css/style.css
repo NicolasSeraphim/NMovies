@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    background: transparent;
+    color: white;
+    font-size: 30px;
+}
+
+.logo {
+    width: 200px;
+    border-radius: 30px;
+}
+
+main {
+    width: 100%;
+    padding: 50px;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 700px;
+}
+
+.text-center {
+    text-align: center;
+    width: auto;
+}
+
+.container h1 {
+    font-size: 3.5rem;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    padding: 0 !important;
+    margin: 30px 0;
+    margin-top: 50px;
+}
+
+ul li {
+    width: 180px;
+    height: 220px;
+    margin: 15px;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.profile {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.profile img,
+.profile .bi-plus-circle-fill {
+    width: 100%;
+    height: 180px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border: transparent solid 5px;
+}
+
+.profile .bi-plus-circle-fill {
+    font-size: 6rem;
+    color: gray;
+}
+
+.profile span {
+    margin-top: 20px;
+    color: gray;
+    font-size: 20px;
+}
+
+.profile:hover img,
+.profile:hover .bi-plus-circle-fill {
+    background-color: white;
+    border: white solid 5px;
+}
+
+.profile:hover span {
+    color: white;
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    border: 1px solid gray;
+    color: gray;
+    background-color: black;
+}
+
+.btn:hover {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn:disabled {
+    border: 1px solid gray;
+    color: gray;
+    cursor: default;
+}
+
+.container h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 1rem 0;
+    color: gray;
+}
+
+hr {
+    margin: 1.5rem 0;
+    border: 1px solid gray;
+}
+
+form {
+    width: 100%;
+    text-align: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-group img {
+    width: 110px;
+    height: 110px;
+    border-radius: 5px;
+}
+
+input[type=text] {
+    background-color: gray;
+    border: 1px solid gray;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.7rem;
+    flex: 0.9;
+    cursor: default;
+}
+
+input[type=text]:focus {
+    border: 1px solid gray;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+input[type=checkbox] {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.3rem;
+}
+
+input[type=checkbox]::before {
+    background-color: black;
+}
+
+::placeholder {
+    color: lightgray;
+    opacity: 1;
+    /* Firefox */
+}
+
+::-ms-input-placeholder {
+    /* Edge 12 -18 */
+    color: lightgray;
+}
+
+.buttons {
+    width: 100%;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+#btnOk {
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+}
+
+#btnOk:hover {
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+}
+
+#btnCancel,
+#btnDelete {
+    margin-left: 1rem;
+}
+
+.profile-image {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    transition: .3s ease;
+    background-color: black;
+    border-radius: 15px;
+}
+
+.icon {
+    z-index: 10;
+    opacity: 1;
+    color: white;
+    background-color: transparent;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-container *{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: start;
+    color: lightgray;
+}
+
+.form-container .left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container .imgBox {
+    width: 110px;
+    height: 110px;
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
+.form-container .left .imgBox {
+    position: relative;
+}
+
+.form-container .imgBox img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
+.form-container .left i {
+    position: absolute;
+    left: 7px;
+    top: 75px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 50%;
+    background-color: black;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.form-container .left .imgBox p {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.form-container .right {
+    margin-bottom: 0;
+}
+
+.form-container .right p {
+    color: white;
+}
+
+.form-container .right .text-center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.form-container .opt {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-container p a {
+    display: inline;
+    cursor: pointer;
+}
+
+.form-container select {
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    padding: 0.2rem;
+}
+
+.form-container .age {
+    width: fit-content;
+    background-color: rgb(52, 52, 52);
+    color: white;
+    padding: 0.3rem 1rem;
+}
+
+.form-container .btn {
+    width: auto;
+    font-size: 16px;
+    padding: 0.5rem 1.7rem;
+}
+
+.form-container .checkbox {
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.form-container input[type=checkbox] {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.form-container .checkbox label {
+    margin-bottom: 0;
+}
+
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.navbar .item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .item i {
+    font-size: 3rem;
+    margin-left: -3rem;
+    cursor: pointer;
+}
+
+.navbar .item div h4 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 0.2rem;
+}
+
+.navbar .item div h5 {
+    font-size: 1rem;
+}
+
+.navbar .user {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .user p {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+}
+
+.navbar .user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.category {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.category h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.slider {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.slider img {
+    max-height: 120px;
+    object-fit: contain;
+    width: 120px;
+    box-sizing: content-box;
+    transition: transform 450ms;
+    margin-right: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.w-330 {
+    width: 330px;
+}
+
+.avatar-change {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.avatar-change img {
+    width: 110px;
+    height: 110px;
+    border-radius: 5px;
+}
+
+.avatar-change i {
+    font-size: 3rem;
+    margin: 0 1rem;
+}
+
+@media (max-width: 800px) {
+    main {
+        padding: 25px 5px;
+    }
+
+    .container h1 {
+        font-size: 3rem;
+        font-weight: normal;
+        letter-spacing: 0.1rem;
+    }
+
+    ul li {
+        margin: 0px;
+        margin-bottom: 20px;
+        width: 170px;
+        height: 200px;
+    }
+
+    .btn {
+        margin-bottom: 20px;
+    }
+
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+
+    .form-container .left .imgBox {
+        width: 160px;
+        height: 160px;
+    }
+
+    .form-container .left i {
+        top: 125px;
+    }
+
+    #btnDelete {
+        margin-left: 0;
+    }
+   
+}

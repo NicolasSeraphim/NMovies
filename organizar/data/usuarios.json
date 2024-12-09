@@ -1,0 +1,32 @@
+[
+    {
+        "nome": "Gallo",
+        "avatar": "img/avatar1.png",
+        "status": true
+    },
+    {
+        "nome": "Carinha",
+        "avatar": "img/avatar2.png",
+        "status": false
+    },
+    {
+        "nome": "Zóio",
+        "avatar": "img/avatar3.png",
+        "status": false
+    },
+    {
+        "nome": "Capitão",
+        "avatar": "img/avatar4.png",
+        "status": true
+    },
+    {
+        "nome": "Trizóio",
+        "avatar": "img/avatar5.jpg",
+        "status": true
+    },
+    {
+        "nome": "Gatuna",
+        "avatar": "img/avatar6.jpg",
+        "status": false
+    }
+]

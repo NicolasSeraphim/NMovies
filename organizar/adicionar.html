@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NMovies</title>
+    <link rel="stylesheet" href="fonts/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img class="logo" src="img/logo.png" alt="Logo">
+        </a>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Adicionar perfil</h1>
+            <h3>Adicione um perfil NMovies para outra pessoa.</h3>
+            <hr>
+            <form onsubmit="return false;">
+                <div class="form-group">
+                    <img src="img/avatar2.png" alt="Avatar" class="avatar">
+                    <input type="text" name="nome" id="nome" placeholder="Nome" autocomplete="none">
+                    <div class="checkbox">
+                        <input type="checkbox" id="crianca">
+                        <label for="crianca">Criança?</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="buttons">
+                    <button id="btnOk" class="btn">Continuar</button>
+                    <button id="btnCancel" class="btn">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- <script src="js/script.js"></script> -->
+
+</body>
+
+</html>

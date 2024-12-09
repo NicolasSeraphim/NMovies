@@ -108,6 +108,8 @@ body {
 a.nav-link.active {
     color: white !important;
     font-weight: 800;
+    border: 2px solid #e50914;
+    border-radius: 50px;
 }
 
 #pesquisar input[type=text] {
